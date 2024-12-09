@@ -1,13 +1,13 @@
-# DASA challenge
+# DASA challenge [^1]
 ## Basic bioinformatics pipeline to annotate a VCF v4.1 file with Python3 and BASH (shell scripts) using ANNOVAR with Snakemake
 
 ### TERMS
 script
-: multiple commands ordered in a way to perform a given task efficiently.
+: multiple commands ordered in a way to perform a given task efficiently.  
 pipeline
-: a sequential series of scripts, using several tools and other resources, to perform a given task in an orderly manner.
+: a sequential series of scripts, using several tools and other resources, to perform a given task in an orderly manner.  
 VCF
-: Variant Calling File, one of the most used formats to show the results of a variant calling pipeline.
+: Variant Calling File, one of the most used formats to show the results of a variant calling pipeline.  
 ANNOVAR
 : an efficient software tool to utilize update-to-date information to functionally annotate genetic variants detected from diverse genomes.
 
@@ -41,17 +41,16 @@ The "Snakefile" uses a few global information from the "config.yaml" essentially
 **PS:** a few files were left for reference, for example the intermediate input file (data), the logs (logs) and the final outputs (results).
 
 ### FLASK API
-Try to search for specific variants by either position, allele frequency (AF from ABraOM), or even sequencing depth (DP). For instance:
-curl -X GET "http://0.0.0.0:5000/query?Chr=1&Start=877831&End=877831&Ref=T&Alt=C"
-curl -X GET "http://0.0.0.0:5000/query?abraom_freq=0.1"
+Try to search for specific variants by either position, allele frequency (AF from ABraOM), or even sequencing depth (DP). For instance:  
+curl -X GET "http://0.0.0.0:5000/query?Chr=1&Start=877831&End=877831&Ref=T&Alt=C"  
+curl -X GET "http://0.0.0.0:5000/query?abraom_freq=0.1"  
 curl -X GET "http://0.0.0.0:5000/query?DP=100"
 
-*Instructions.txt*
+*Instructions.txt*  
 This file contains the instructions sent to me by email for your convenience.
 
 ## CONTACT
 email: filipe.ferreira.santos93@gmail.com
 phone: +55 (11) 9 4541-9392
 
-Here's a sentence with a footnote. [^1]
-[^1]: This is the footnote.
+[^1]: Due date was: December 09th 2024.
