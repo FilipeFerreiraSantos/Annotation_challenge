@@ -1,0 +1,39 @@
+NOTICE: temporary files will be written to myTMPdir/RSid40Wx
+-----------------------------------------------------------------
+NOTICE: Processing operation=g protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile myTMPdir/RSid40Wx/temp.refGene -exonsort -nofirstcodondel data/input.annovar annovar/humandb -thread 1>
+NOTICE: Output files are written to myTMPdir/RSid40Wx/temp.refGene.variant_function, myTMPdir/RSid40Wx/temp.refGene.exonic_variant_function
+NOTICE: the queryfile data/input.annovar contains 30009 lines
+NOTICE: threading is disabled for gene-based annotation on file with less than 1000000 input lines
+NOTICE: Reading gene annotation from annovar/humandb/hg19_refGene.txt ... Done with 72567 transcripts (including 17617 without coding sequence annotation) for 28263 unique genes
+NOTICE: Processing next batch with 30009 unique variants in 30009 input lines
+NOTICE: Reading FASTA sequences from annovar/humandb/hg19_refGeneMrna.fa ... Done with 24229 sequences
+WARNING: A total of 448 sequences will be ignored due to lack of correct ORF annotation
+
+NOTICE: Running with system command <coding_change.pl  myTMPdir/RSid40Wx/temp.refGene.exonic_variant_function.orig annovar/humandb/hg19_refGene.txt annovar/humandb/hg19_refGeneMrna.fa -alltranscript -out myTMPdir/RSid40Wx/temp.refGene.fa -newevf myTMPdir/RSid40Wx/temp.refGene.exonic_variant_function>
+Warning: 1 transcripts are flagged as having potential ORF issues (premature stopcodon or lack of stop codon)
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=avsnp150
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype avsnp150 -buildver hg19 -outfile myTMPdir/RSid40Wx/temp data/input.annovar annovar/humandb -thread 1>
+NOTICE: Output file with variants matching filtering criteria is written to myTMPdir/RSid40Wx/temp.hg19_avsnp150_dropped, and output file with other variants is written to myTMPdir/RSid40Wx/temp.hg19_avsnp150_filtered
+NOTICE: the queryfile data/input.annovar contains 30009 lines
+NOTICE: Creating new threads for query line 1 to 30009
+NOTICE: Processing next batch with 30009 unique variants in 30009 input lines
+NOTICE: Database index loaded. Total number of bins is 28258790 and the number of bins to be scanned is 24892
+NOTICE: Scanning filter database annovar/humandb/hg19_avsnp150.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=abraom
+NOTICE: Finished reading 3 column headers for '-dbtype abraom'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype abraom -buildver hg19 -outfile myTMPdir/RSid40Wx/temp data/input.annovar annovar/humandb -thread 1 -otherinfo>
+NOTICE: the --dbtype abraom is assumed to be in generic ANNOVAR database format
+NOTICE: Output file with variants matching filtering criteria is written to myTMPdir/RSid40Wx/temp.hg19_abraom_dropped, and output file with other variants is written to myTMPdir/RSid40Wx/temp.hg19_abraom_filtered
+NOTICE: the queryfile data/input.annovar contains 30009 lines
+NOTICE: Creating new threads for query line 1 to 30009
+NOTICE: Processing next batch with 30009 unique variants in 30009 input lines
+NOTICE: Database index loaded. Total number of bins is 1202560 and the number of bins to be scanned is 22671
+NOTICE: Scanning filter database annovar/humandb/hg19_abraom.txt...Done
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to results/annotated.hg19_multianno.txt

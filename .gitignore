@@ -1,0 +1,8 @@
+# Ignores my guide of commands
+CMDs.txt
+
+# Ignores some ANNOVAR data
+annovar/humandb/annovar_downdb.log
+
+# Ignores some test files
+data/NIST.test.vcf

@@ -1,0 +1,9 @@
+Conforme combinado, segue o desafio para ser entregue até o dia 09/12/2024.
+
+Descrição do desafio:
+Implementar um pipeline de bioinformática, utilizando preferencialmente o snakemake, que realize, a partir do arquivo VCF fornecido em anexo, as anotações das variantes com gene, dbSNP id e frequência de pelo menos um banco de dados populacional. O resultado deverá ser entregue em uma API e uma interface interativa web (flask) que interaja com a API para filtrar variantes por frequência e profundidade (DP).
+Importante:
+O projeto deverá ser desenvolvido utilizando principalmente a linguagem de programação Python. Caso necessário as linguagens R e Bash poderão ser utilizadas. Esse desafio deverá ser entregue como um projeto no github contendo um arquivo Dockerfile para a construção da aplicação.
+
+Observações:
+Caso não consiga entregar o projeto todo, entregue o que conseguir. Faremos a discussão em cima da parte que for entregue. Além das habilidades técnicas, é muito importante a comunicação e pesquisa por soluções. Se julgar útil, combine códigos próprios com bibliotecas disponíveis publicamente.

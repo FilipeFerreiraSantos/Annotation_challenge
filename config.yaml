@@ -1,0 +1,5 @@
+# config.yaml
+
+# General PARs for Snakemake
+build_version: "hg19"
+threads: 10
