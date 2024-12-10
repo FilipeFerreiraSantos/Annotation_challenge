@@ -6,3 +6,6 @@ annovar/humandb/annovar_downdb.log
 
 # Ignores some test files
 data/NIST.test.vcf
+
+# Ignores the video tutorial
+tutorial.mkv
