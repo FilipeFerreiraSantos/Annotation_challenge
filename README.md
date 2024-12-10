@@ -6,6 +6,8 @@
 </div>
 
 ### TERMS
+bioinformatics
+: a scientific field that uses computers, math, statistics, and databases to collect, store, analyze, and share biological information.  
 script
 : multiple commands ordered in a way to perform a given task efficiently.  
 pipeline
@@ -13,12 +15,14 @@ pipeline
 VCF
 : Variant Calling File, one of the most used formats to show the results of a variant calling pipeline.  
 ANNOVAR
-: an efficient software tool to utilize update-to-date information to functionally annotate genetic variants detected from diverse genomes.
+: an efficient software tool to utilize update-to-date information to functionally annotate genetic variants detected from diverse genomes.  
+snakemake
+: a workflow management system tool to create reproducible and scalable data analyses.
 
 ### STEPS:
 1. After **cloning** this repository, use the Dockerfile (made to address different needs while being light) to **build and run the image**
 2. Once inside the **container**, make sure you are in the **CONDA environment** to run Snakemake
-3. **Download** other extra required files (dbSNP database) to execute the analyses (since these are large - >10GB - files, they are neither provided in Docker nor in Github)
+3. **Download** other extra required files (dbSNP database) to execute the analyses (since these are large - >10GB - files, they are provided in Docker)
 4. Run the **Snakefile** to execute the **pipeline**
 5. Run **Flask** to execute the **API**
 
@@ -34,7 +38,7 @@ tar -xzvf annovar.latest.tar.gz
 - `docker run --network=host -it fferreira/ubuntu20.04-annovar_snakemake_flask-api bash` (to allow internet connection - ANNOVAR DB downloads and Flask API - and run commands inside the container)
 - `conda init; conda activate snakemake_env` (if necessary --> in this case, run `source path/to/.bashrc`)
 - `bash download_annovar_db.sh` (to download the dbSNP database - and others, if wanted/needed - to run the analyses)
-- `snakemake -j 10` (run with the '-n' FLAG for a "dry (test) run")
+- `snakemake -j 10` (run with the '-n' FLAG for a "dry (test) run"; careful with the '-j' FLAG - adjust it according to your computer power)
 - `python flaskApp.py` (to start the Flask API)
 
 ### SNAKEMAKE
@@ -49,13 +53,15 @@ The "Snakefile" uses a few global information from the "config.yaml" essentially
 Try to search for specific variants by either position, allele frequency (AF from ABraOM), or even sequencing depth (DP). For instance:  
 curl -X GET "http://0.0.0.0:5000/query?Chr=1&Start=877831&End=877831&Ref=T&Alt=C"  
 curl -X GET "http://0.0.0.0:5000/query?abraom_freq=0.1"  
-curl -X GET "http://0.0.0.0:5000/query?DP=100"
+curl -X GET "http://0.0.0.0:5000/query?DP=100"  
+curl -X GET "http://0.0.0.0:5000/query?Chr=2&Start=877831&End=877831&Ref=T&Alt=C" (to see an error)  
+curl -X GET "http://0.0.0.0:5000/query?Chr=1&Start=877831&End=877831&Ref=T" (to see another type of error)
 
 *Instructions.txt*  
 This file contains the instructions sent to me by email for your convenience.
 
 ## CONTACT
-email: filipe.ferreira.santos93@gmail.com
+email: filipe.ferreira.santos93@gmail.com  
 phone: +55 (11) 9 4541-9392
 
 [^1]: Due date was: December 09th 2024.
