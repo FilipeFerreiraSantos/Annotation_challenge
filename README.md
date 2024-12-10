@@ -25,7 +25,8 @@ ANNOVAR
 ### Most of the contents in the "annovar" directory comes from the following unzipped web-downloaded file: annovar.latest.tar.gz
 tar -xzvf annovar.latest.tar.gz
 
-**PS:** I wanted to use this resource/tool because in my Master's degree the variant calling pipeline I updated uses [ANNOVAR](https://annovar.openbioinformatics.org/en/latest/).
+**PS:** I wanted to use this resource/tool because in my Master's degree the variant calling pipeline I updated uses [ANNOVAR](https://annovar.openbioinformatics.org/en/latest/).  
+*Docker:* in the '.dockerignore' file there are a few files (dbSNP and even gnomAD - a database that I thought to use for AF, but it is too big) that were there in the ANNOVAR directory before.
 
 ### USAGE (CMDs):
 - `git clone git@github.com:FilipeFerreiraSantos/Annotation_challenge.git` (to have locally this public repository)
