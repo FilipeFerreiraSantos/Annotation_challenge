@@ -1,4 +1,4 @@
-# DASA challenge [^1]
+# Annotation challenge [^1]
 ## Basic bioinformatics pipeline to annotate a VCF v4.1 file with Python3 and BASH (shell scripts) using ANNOVAR with Snakemake
 
 <div align="center">
