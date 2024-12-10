@@ -1,7 +1,9 @@
 # DASA challenge [^1]
 ## Basic bioinformatics pipeline to annotate a VCF v4.1 file with Python3 and BASH (shell scripts) using ANNOVAR with Snakemake
 
-<img src="images/Challenge_Github-Logo.jpg" alt="MY LOGO" width="500" height="500"/>
+<div align="center">
+  <img src="images/Challenge_Github-Logo.jpg" alt="MY LOGO" width="500" height="500"/>
+</div>
 
 ### TERMS
 script
