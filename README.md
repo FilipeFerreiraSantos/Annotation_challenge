@@ -61,7 +61,7 @@ curl -X GET "http://0.0.0.0:5000/query?Chr=1&Start=877831&End=877831&Ref=T" (to 
 This file contains the instructions sent to me by email for your convenience.
 
 ## CONTACT
-email: filipe.ferreira.santos93@gmail.com  
+email: fil*************santos93@gmail.com  
 phone: +55 (11) 9 4541-9392
 
 [^1]: Due date was: December 09th 2024.
